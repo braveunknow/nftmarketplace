@@ -14,42 +14,21 @@ body {
 }
 
 .gradient-bg-hero {
-  background-color: #151c25;
-  background-image: radial-gradient(
-      at 0% 0%,
-      hsl(302deg 25% 18%) 0,
-      transparent 50%
-    ),
-    radial-gradient(at 50% 0%, hsl(0deg 39% 30%) 0, transparent 50%),
-    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+  background-color: #ffffff;
+
 }
 
 .gradient-bg-artworks {
-  background-color: #0f0e13;
-  background-image: radial-gradient(
-      at 50% 50%,
-      hsl(302deg 25% 18%) 0,
-      transparent 50%
-    ),
-    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
-    radial-gradient(at 50% 50%, hsla(339, 39%, 25%, 1) 0, transparent 50%);
+  background-color: #eff9eb;
+ 
 }
 
 .gradient-bg-footer {
-  background-color: #151c25;
-  background-image: radial-gradient(
-      at 0% 100%,
-      hsl(0deg 39% 30%) 0,
-      transparent 53%
-    ),
-    radial-gradient(at 50% 150%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+  background-color: #ffffff;
+ 
 }
 
-.text-gradient {
-  background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 .lds-dual-ring {
   display: inline-block;
@@ -77,3 +56,39 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.btn-clr{
+  z-index: 0;
+  background: rgb(210,50,166);
+  background: linear-gradient(90deg, rgba(210,50,166,1) 0%, rgba(42,216,242,1) 100%);
+  transition:ease-in;
+}
+.btn-clr:hover{
+  transition:ease-in;
+  background: rgb(214,10,158);
+  background: linear-gradient(90deg, rgba(214,10,158,1) 0%, rgba(11,201,229,1) 100%);
+ 
+}
+.stick{
+  margin: auto;
+  background-color:#fff;
+  position: fixed;
+  width: 80%;
+}
+.nav-wrap{
+  z-index: 100;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+.logo{
+  width: 200px;
+}
+
+.btn-card{
+  color: rgb(255, 255, 255);
+  background-color: #2595f1;
+}

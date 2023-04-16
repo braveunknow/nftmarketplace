@@ -1,49 +1,68 @@
-import timelessLogo from '../assets/timeless.png'
+import timelessLogo from '../assets/artistry.png'
 import { connectWallet } from '../Blockchain.Services'
 import { useGlobalState, truncate } from '../store'
 
 const Header = () => {
   const [connectedAccount] = useGlobalState('connectedAccount')
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 80) {
+      document.querySelector('.nav-wrap').classList.add("shadow");
+      document.querySelector('.logo-img').classList.add("logo");
+    }
+    else {
+      document.querySelector('.nav-wrap').classList.remove("shadow");
+      document.querySelector('.logo-img').classList.remove("logo");
+    
+    }
+    
+  });
+  
   return (
-    <nav className="w-4/5 flex md:justify-center justify-between items-center py-4 mx-auto">
-      <div className="md:flex-[0.5] flex-initial justify-center items-center">
+    
+    <div className='nav-wrap stick'>
+    <nav className=" navbar w-4/5 flex justify-between items-center py-3 mx-auto ">
+      <div className="md:flex flex-initial ">
         <img
-          className="w-32 cursor-pointer"
+          className="w-4/6 cursor-pointer logo-img"
           src={timelessLogo}
           alt="Timeless Logo"
         />
       </div>
 
       <ul
-        className="md:flex-[0.5] text-white md:flex
-        hidden list-none flex-row justify-between 
-        items-center flex-initial"
+        className="md:flex-[0.5] text-black font-semibold md:flex
+        hidden list-none items-center flex-row flex-end"
       >
-        <li className="mx-4 cursor-pointer">Market</li>
-        <li className="mx-4 cursor-pointer">Artist</li>
-        <li className="mx-4 cursor-pointer">Features</li>
-        <li className="mx-4 cursor-pointer">Community</li>
-      </ul>
-
-      {connectedAccount ? (
+        <li className="mx-5 cursor-pointer">Home</li>
+        <li className="mx-5 cursor-pointer">About</li>
+        <li className="mx-5 cursor-pointer truncate">Our Team</li>
+        <li className="mx-5 cursor-pointer">Community</li>
+        <li className='mx-5'>
+        {connectedAccount ? (
         <button
-          className="shadow-xl shadow-black text-white
-        bg-[#e32970] hover:bg-[#bd255f] md:text-xs p-2
-          rounded-full cursor-pointer"
+          className="drop-shadow-2xl rounded-2xl shadow-inner text-white
+          btn-clr 
+           cursor-pointer p-4 "
         >
-          {truncate(connectedAccount, 4, 4, 11)}
+          {truncate(connectedAccount, 6, 6, 15)}
         </button>
       ) : (
         <button
-          className="shadow-xl shadow-black text-white
-        bg-[#e32970] hover:bg-[#bd255f] md:text-xs p-2
-          rounded-full cursor-pointer"
+          className="drop-shadow-2xl rounded-2xl shadow-inner text-white
+          btn-clr
+           cursor-pointer p-4 truncate "
           onClick={connectWallet}
         >
           Connect Wallet
         </button>
       )}
+        </li>
+      </ul>
+
+     
     </nav>
+
+    </div>
   )
 }
 
