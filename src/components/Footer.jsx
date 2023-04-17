@@ -16,7 +16,7 @@ const Footer = () => (
     <p className='text-black font-semibold pt-5'>Developed by:
      <a className='ml-2 link-clr' href="https://www.linkedin.com/in/nikita-dhumal-2973741a4/" target='_blank'>Nikita Dhumal</a>
      <a className='ml-2 link-clr' href="https://www.linkedin.com/in/bhushan-mayekar-9b4736161/" target='_blank'>Bhushan Mayekar</a> 
-     <a className='ml-2 link-clr' href="https://www.linkedin.com/in/umangjatwala/" target='_blank'>Umang Agrawal</a> 
+     <a className='ml-2 link-clr' href="https://www.linkedin.com/in/umangjatwala/" target='_blank'>Umang Jatwala</a> 
      <a className='ml-2 link-clr' href="https://www.linkedin.com/in/divesh-kolhe-436401235/" target='_blank'>Divesh Kolhe</a> </p>
   </div>
 )
