@@ -5,7 +5,7 @@ import { useGlobalState, truncate } from '../store'
 
 const Transactions = () => {
   const [transactions] = useGlobalState('transactions')
-  const [end, setEnd] = useState(3)
+  const [end, setEnd] = useState(6)
   const [count] = useState(3)
   const [collection, setCollection] = useState([])
 

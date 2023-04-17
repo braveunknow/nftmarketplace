@@ -1,6 +1,8 @@
 import timelessLogo from '../assets/artistry.png'
 import { connectWallet } from '../Blockchain.Services'
 import { useGlobalState, truncate } from '../store'
+import { Link } from 'react-router-dom'
+import About from './About'
 
 const Header = () => {
   const [connectedAccount] = useGlobalState('connectedAccount')
@@ -19,7 +21,7 @@ const Header = () => {
   
   return (
     
-    <div className='nav-wrap stick'>
+    <div className='nav-wrap stick '>
     <nav className=" navbar w-4/5 flex justify-between items-center py-3 mx-auto ">
       <div className="md:flex flex-initial ">
         <img
@@ -33,10 +35,10 @@ const Header = () => {
         className="md:flex-[0.5] text-black font-semibold md:flex
         hidden list-none items-center flex-row flex-end"
       >
-        <li className="mx-5 cursor-pointer">Home</li>
-        <li className="mx-5 cursor-pointer">About</li>
+        <li className="mx-5 cursor-pointer"><a href="/">Home</a> </li>
+        <li className="mx-5 cursor-pointer"><Link to={About}>About</Link> </li>
         <li className="mx-5 cursor-pointer truncate">Our Team</li>
-        <li className="mx-5 cursor-pointer">Community</li>
+        <li className="mx-5 cursor-pointer"><a href="https://metamask.io/" target='_blank'>Metamask</a> </li>
         <li className='mx-5'>
         {connectedAccount ? (
         <button
@@ -63,6 +65,7 @@ const Header = () => {
     </nav>
 
     </div>
+    
   )
 }
 

@@ -8,13 +8,13 @@ const Alert = () => {
   return (
     <div
       className={`fixed top-0 left-0 w-screen h-screen
-      flex items-center justify-center bg-black 
+      flex items-center justify-center bg-black  z-[150]
       bg-opacity-50 transform transition-transform
       duration-300 ${alert.show ? 'scale-100' : 'scale-0'}`}
     >
       <div
         className="flex flex-col justify-center items-center
-        bg-[#151c25] shadow-xl shadow-[#e32970] rounded-xl
+        bg-[#ffffff] shadow-sm  rounded-xl
         min-w-min py-3 px-10"
       >
         {alert.color == 'red' ? (
@@ -22,7 +22,7 @@ const Alert = () => {
         ) : (
           <BsCheck2Circle className="text-green-600 text-4xl" />
         )}
-        <p className="text-white my-3">{alert.msg}</p>
+        <p className="text-black my-3">{alert.msg}</p>
       </div>
     </div>
   )

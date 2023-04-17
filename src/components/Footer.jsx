@@ -1,33 +1,23 @@
 import timelessLogo from '../assets/artistry.png'
 
 const Footer = () => (
-  <div className="w-full flex md:justify-center justify-between items-center flex-col p-4 gradient-bg-footer">
-    <div className="w-full flex sm:flex-row flex-col justify-between items-center my-4">
-      <div className="flex flex-[0.25] justify-center items-center">
-        <img src={timelessLogo} alt="logo" className="w-32" />
-      </div>
-
-      <div className="flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full">
-        <p className="text-white text-base text-center mx-2 cursor-pointer">
-          Market
-        </p>
-        <p className="text-white text-base text-center mx-2 cursor-pointer">
-          Artist
-        </p>
-        <p className="text-white text-base text-center mx-2 cursor-pointer">
-          Features
-        </p>
-        <p className="text-white text-base text-center mx-2 cursor-pointer">
-          Community
-        </p>
-      </div>
-
-      <div className="flex flex-[0.25] justify-center items-center">
-        <p className="text-white text-right text-xs">
-          &copy;2022 All rights reserved
-        </p>
-      </div>
-    </div>
+  <div className="w-full flex flex-col md:justify-center justify-between items-center py-10">
+    <img className='w-1/6' src={timelessLogo} alt="" />
+    <ul
+        className="md:flex-[0.5] text-black font-semibold md:flex
+        hidden list-none items-center flex-row flex-end py-8"
+      >
+      <li className="mx-5 cursor-pointer"><a href="/">Home</a> </li>
+        <li className="mx-5 cursor-pointer">About</li>
+        <li className="mx-5 cursor-pointer truncate">Our Team</li>
+        <li className="mx-5 cursor-pointer"><a href="https://metamask.io/" target='_blank'>Metamask</a> </li>
+    
+    </ul>
+    <p className='text-black font-semibold pt-5'>Developed by:
+     <a className='ml-2 link-clr' href="https://www.linkedin.com/in/nikita-dhumal-2973741a4/" target='_blank'>Nikita Dhumal</a>
+     <a className='ml-2 link-clr' href="https://www.linkedin.com/in/bhushan-mayekar-9b4736161/" target='_blank'>Bhushan Mayekar</a> 
+     <a className='ml-2 link-clr' href="https://www.linkedin.com/in/umangjatwala/" target='_blank'>Umang Agrawal</a> 
+     <a className='ml-2 link-clr' href="https://www.linkedin.com/in/divesh-kolhe-436401235/" target='_blank'>Divesh Kolhe</a> </p>
   </div>
 )
 

@@ -15,6 +15,13 @@ const Artworks = () => {
     setCollection(getCollection())
   }, [nfts, end])
 
+
+  const getImg = async (url)=>{
+    const res= await fetch(url);
+    console.log(res);
+    return "https://ipfs.io/ipfs/QmfWscPCQwM2QEWPwxg8HAN44B13xa8Xp6YvDdTGRvisPG";
+  }
+
   return (
     <div className="py-10 gradient-bg-artworks">
       <div className="w-4/5 py-10 mx-auto">
@@ -52,12 +59,17 @@ const Card = ({ nft }) => {
   }
 
   return (
-    <div className="w-full shadow-sm bg-[#def4ff] shadow-black rounded-md overflow-hidden mx-2 p-3">
+    <div className="w-full zoom shadow-sm bg-[#def4ff] shadow-black rounded-md overflow-hidden mx-2 p-3">
+      <div className='overflow-hidden'>
+
       <img
-        src={nft.metadataURI}
+        src={
+          nft.metadataURI
+        }
         alt={nft.title}
-        className="h-60 w-full object-cover  border-black rounded-lg mb-3"
+        className="zoom-img  h-60 w-full object-cover  border-black rounded-lg mb-3"
       />
+      </div>
       <h4 className="text-black font-semibold">{nft.title}</h4>
       <p className="text-black-400 text-xs my-1">{nft.description}</p>
       <div className="flex justify-between items-center mt-3 text-black">

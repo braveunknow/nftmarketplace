@@ -87,18 +87,18 @@ const CreateNFT = () => {
     <div
       className={`fixed top-0 left-0 w-screen h-screen flex items-center
         justify-center bg-black bg-opacity-50 transform
-        transition-transform duration-300 ${modal}`}
+        transition-transform duration-300 z-[150] ${modal}`}
     >
-      <div className="bg-[#151c25] shadow-xl shadow-[#e32970] rounded-xl w-11/12 md:w-2/5 h-7/12 p-6">
+      <div className="bg-[#f9f9f9] shadow-sm rounded-xl w-11/12 md:w-2/5 h-7/12 p-6">
         <form className="flex flex-col">
           <div className="flex flex-row justify-between items-center">
-            <p className="font-semibold text-gray-400">Add NFT</p>
+            <p className="font-semibold text-xl text-black-400">Add NFT</p>
             <button
               type="button"
               onClick={closeModal}
               className="border-0 bg-transparent focus:outline-none"
             >
-              <FaTimes className="text-gray-400" />
+              <FaTimes className="text-black-400" />
             </button>
           </div>
 
@@ -109,35 +109,34 @@ const CreateNFT = () => {
                 className="h-full w-full object-cover cursor-pointer"
                 src={
                   imgBase64 ||
-                  'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
+                  "https://dailyhodl.com/wp-content/uploads/2021/12/ross-sells-nft.jpg?w=1024"
                 }
               />
             </div>
           </div>
 
-          <div className="flex flex-row justify-between items-center bg-gray-800 rounded-xl mt-5">
+          <div className="flex flex-row justify-between items-center bg-[#E4E6E7] rounded-xl mt-5">
             <label className="block">
               <span className="sr-only">Choose profile photo</span>
               <input
                 type="file"
                 accept="image/png, image/gif, image/jpeg, image/webp"
-                className="block w-full text-sm text-slate-500
+                className="block w-full text-sm text-black-500
                   file:mr-4 file:py-2 file:px-4
                   file:rounded-full file:border-0
                   file:text-sm file:font-semibold
-                  file:bg-[#19212c] file:text-gray-400
-                  hover:file:bg-[#1d2631]
-                  cursor-pointer focus:ring-0 focus:outline-none"
+                  file:bg-[#E4E6E7] file:text-black-400
+                  cursor-pointer focus:ring-0 focus:outline-none "
                 onChange={changeImage}
                 required
               />
             </label>
           </div>
 
-          <div className="flex flex-row justify-between items-center bg-gray-800 rounded-xl mt-5">
+          <div className="flex flex-row justify-between items-center bg-[#E4E6E7] rounded-xl mt-5">
             <input
               className="block w-full text-sm
-                text-slate-500 bg-transparent border-0
+                text-black-500 bg-transparent border-0
                 focus:outline-none focus:ring-0"
               type="text"
               name="title"
@@ -148,10 +147,10 @@ const CreateNFT = () => {
             />
           </div>
 
-          <div className="flex flex-row justify-between items-center bg-gray-800 rounded-xl mt-5">
+          <div className="flex flex-row justify-between items-center bg-[#E4E6E7] rounded-xl mt-5">
             <input
               className="block w-full text-sm
-                text-slate-500 bg-transparent border-0
+                text-black-500 bg-transparent border-0
                 focus:outline-none focus:ring-0"
               type="number"
               step={0.01}
@@ -164,10 +163,10 @@ const CreateNFT = () => {
             />
           </div>
 
-          <div className="flex flex-row justify-between items-center bg-gray-800 rounded-xl mt-5">
+          <div className="flex flex-row justify-between items-center bg-[#E4E6E7] rounded-xl mt-5">
             <textarea
               className="block w-full text-sm resize-none
-                text-slate-500 bg-transparent border-0
+                text-black-500 bg-transparent border-0
                 focus:outline-none focus:ring-0 h-20"
               type="text"
               name="description"
@@ -181,12 +180,10 @@ const CreateNFT = () => {
           <button
             type="submit"
             onClick={handleSubmit}
-            className="flex flex-row justify-center items-center
-              w-full text-white text-md bg-[#e32970]
-              hover:bg-[#bd255f] py-2 px-5 rounded-full
-              drop-shadow-xl border border-transparent
-              hover:bg-transparent hover:text-[#e32970]
-              hover:border hover:border-[#bd255f]
+            className="btn-card flex flex-row justify-center items-center
+              w-full text-white text-md  py-2 px-5 rounded-full
+              drop-shadow-sm border border-transparent
+            
               focus:outline-none focus:ring mt-5"
           >
             Mint Now
